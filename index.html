@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
+    <link rel="stylesheet" href="index.css" />
+    <title>LOREMIPSUM.NET</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <div class="nav__wrapper">
+          <a href="#" class="nav__logo">
+            <img src="img/logo.svg" alt="LoremIpsum.net" />
+          </a>
+          <ul class="nav__menu">
+            <li class="nav__menu-item">
+              <a href="#">Бизнес</a>
+            </li>
+            <li class="nav__menu-item"><a href="#">О нас</a></li>
+            <li class="nav__menu-item"><a href="#">Цены</a></li>
+            <li class="nav__menu-item"><a href="#">Оформить заказ</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="main">
+      <section class="hero">
+        <div class="container">
+          <h1 class="hero__title">
+            Легкое оформление заказа —
+            <span class="title-highlight">ваша система под контролем!</span>
+          </h1>
+          <div class="hero__advantages">
+            <p class="hero__advatages-title">
+              Следуйте простым шагам для быстрого и удобного заказа вашей
+              системы. Мы обеспечиваем прозрачность и контроль на каждом этапе.
+            </p>
+            <ul class="hero__advantages-list">
+              <li class="hero__advantages-list-item">
+                Удобный интерфейс позволяет легко и быстро оформить заказ без
+                лишних шагов.
+              </li>
+              <li class="hero__advantages-list-item">
+                Наша поддержка всегда готова помочь вам с любыми вопросами на
+                всех этапах оформления.
+              </li>
+              <li class="hero__advantages-list-item">
+                Мы обеспечиваем высокую степень безопасности данных и платежей
+                на всех этапах взаимодействия.
+              </li>
+              <li class="hero__advantages-list-item">
+                Мы минимизируем время ожидания, чтобы вы получили свои системы в
+                кратчайшие сроки.
+              </li>
+            </ul>
+          </div>
+          <button class="btn hero__order-btn">заказать</button>
+          <a href="#" class="hero__more-link"> подробнее </a>
+        </div>
+      </section>
+    </main>
+    <section class="order">
+      <div class="container">
+        <h2 class="section-title">
+          Оформление <span class="title-highlight">Заказа</span>
+        </h2>
+        <p class="order__subtitle">
+          Заполните форму, выберите параметры системы, и мы позаботимся об
+          остальном. Убедитесь, что каждый этап выполнен с точностью и вниманием
+          к деталям.
+        </p>
+        <div class="order__parent-list">
+          <ul class="order__list"></ul>
+        </div>
+
+        <form action="#" class="order__form">
+          <div class="order__form-wrapper">
+            <div
+              class="order__form-system-type order__form-item order__form-item_active"
+            >
+              <div class="order__form-system-type__current">
+                Выберите тип системы
+              </div>
+              <div class="order__form-system-type__body">
+                <div class="order__form-system-type__item">
+                  автоматизированная
+                </div>
+                <div class="order__form-system-type__item">гибридная</div>
+                <div class="order__form-system-type__item">ручная</div>
+              </div>
+              <span class="input__error">*Пустое поле</span>
+            </div>
+            <label
+              for="e-mail"
+              class="order__form__label order__form-item order__form-item_active"
+            >
+              <input
+                type="text"
+                class="input"
+                placeholder="Ваш e-mail"
+                id="e-mail"
+              />
+              <span class="input__error">*Пустое поле</span>
+            </label>
+            <label
+              for="name"
+              class="order__form__label order__form-item order__form-item_active"
+            >
+              <input
+                type="text"
+                class="input"
+                placeholder="Ваше имя"
+                id="name"
+              />
+              <span class="input__error">*Пустое поле</span>
+            </label>
+            <div
+              class="order__form-progress order__form-item order__form-item_active"
+            >
+              <div class="order__form-progress__wrapper">
+                <p class="order__form-progress__title">
+                  Используйте ползунок для указания степени выполнения вашего
+                  заказа.
+                </p>
+                <span class="order__form-progress__number" id="progress-value"
+                  >0%</span
+                >
+              </div>
+              <input
+                type="range"
+                name="form-progress"
+                id="form-progress"
+                class="form-progress"
+                min="1"
+                max="100"
+                value="1"
+              />
+              <span class="input__error">*Пустое поле</span>
+            </div>
+            <div
+              class="order__form-file-upload order__form-item order__form-item_active"
+            >
+              <label
+                for="file-input"
+                class="order__form-file-upload__label"
+              ></label>
+              <input
+                id="file-input"
+                class="order__form-file-upload__input"
+                type="file"
+              />
+              <span class="input__error">*Пустое поле</span>
+            </div>
+          </div>
+          <div class="order__form-btn-wrapper">
+            <button class="btn order__btn-submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="slider">
+      <div class="container">
+        <h2 class="section-title slider__title">
+          Наши клиенты <span class="title-highlight">о нас</span>
+        </h2>
+        <div class="swiper mySwiper slider__swiper">
+          <div class="swiper-wrapper slider__wrapper"></div>
+          <div class="swiper-button-next slider__button-next"></div>
+          <div class="swiper-button-prev slider__button-prev"></div>
+          <div class="swiper-pagination slider__pagination"></div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__section">
+            <div class="footer__rights">
+              © 2018 «LoremIpsum.net» Все права защищены.
+            </div>
+          </div>
+          <div class="footer__section">
+            <ul class="footer__payment">
+              <li class="footer__payment-item">
+                <div class="payment-item__img">
+                  <img src="img/footer/qiwi-icon.svg" alt="Qiwi" />
+                </div>
+                <p class="payment-item__name">Qiwi wallet</p>
+              </li>
+              <li class="footer__payment-item">
+                <div class="payment-item__img">
+                  <img src="img/footer/yandex-money-icon.svg" alt="Yandex" />
+                </div>
+                <p class="payment-item__name">Yandex Money</p>
+              </li>
+              <li class="footer__payment-item">
+                <div class="payment-item__img">
+                  <img src="img/footer/web-money-icon.svg" alt="Web Money" />
+                </div>
+                <p class="payment-item__name">Web Money</p>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__section">
+            <ul class="footer__contact-list">
+              <li class="footer__contact-list-item">
+                <a
+                  href="mailto:info@ipsum228.com"
+                  class="footer__section-contact-link"
+                >
+                  <div class="footer__section-contact-img">
+                    <img src="img/footer/mail-icon.svg" alt="e-mail" />
+                  </div>
+                  <div class="footer__section-contact-name">
+                    info@ipsum228.com
+                  </div>
+                </a>
+              </li>
+              <li class="footer__contact-list-item">
+                <a href="https://vk.com" class="footer__section-contact-link">
+                  <div class="footer__section-contact-img">
+                    <img src="img/footer/vk-icon.svg" alt="vk" />
+                  </div>
+                  <div class="footer__section-contact-name">Мы вконтакте</div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="data.js"></script>
+    <script src="swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
