@@ -8,23 +8,33 @@
     <title>LOREMIPSUM.NET</title>
   </head>
   <body>
-    <nav class="nav">
+    <header class="header">
       <div class="container">
-        <div class="nav__wrapper">
+        <div class="header__wrapper">
           <a href="#" class="nav__logo">
             <img src="img/logo.svg" alt="LoremIpsum.net" />
           </a>
-          <ul class="nav__menu">
-            <li class="nav__menu-item">
-              <a href="#">Бизнес</a>
-            </li>
-            <li class="nav__menu-item"><a href="#">О нас</a></li>
-            <li class="nav__menu-item"><a href="#">Цены</a></li>
-            <li class="nav__menu-item"><a href="#">Оформить заказ</a></li>
-          </ul>
+          <div class="header__nav">
+            <nav class="nav">
+              <ul class="nav__menu">
+                <li class="nav__menu-item">
+                  <a href="#">Бизнес</a>
+                </li>
+                <li class="nav__menu-item"><a href="#">О нас</a></li>
+                <li class="nav__menu-item"><a href="#">Цены</a></li>
+                <li class="nav__menu-item"><a href="#">Оформить заказ</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <div class="nav__burger">
+            <button class="nav-icon-btn">
+              <div class="nav-icon"></div>
+            </button>
+          </div>
         </div>
       </div>
-    </nav>
+    </header>
     <main class="main">
       <section class="hero">
         <div class="container">
@@ -56,8 +66,10 @@
               </li>
             </ul>
           </div>
-          <button class="btn hero__order-btn">заказать</button>
-          <a href="#" class="hero__more-link"> подробнее </a>
+          <div class="hero__btns-wrapper">
+            <button class="btn hero__order-btn">заказать</button>
+            <a href="#" class="hero__more-link"> подробнее </a>
+          </div>
         </div>
       </section>
     </main>
@@ -66,7 +78,7 @@
         <h2 class="section-title">
           Оформление <span class="title-highlight">Заказа</span>
         </h2>
-        <p class="order__subtitle">
+        <p class="order__subtitle display-none">
           Заполните форму, выберите параметры системы, и мы позаботимся об
           остальном. Убедитесь, что каждый этап выполнен с точностью и вниманием
           к деталям.
@@ -77,81 +89,82 @@
 
         <form action="#" class="order__form">
           <div class="order__form-wrapper">
-            <div
-              class="order__form-system-type order__form-item order__form-item_active"
-            >
-              <div class="order__form-system-type__current">
-                Выберите тип системы
-              </div>
-              <div class="order__form-system-type__body">
-                <div class="order__form-system-type__item">
-                  автоматизированная
+            <div class="order__form-wrapper-top">
+              <div
+                class="order__form-system-type order__form-item order__form-item_active"
+              >
+                <div class="order__form-system-type__current">
+                  Выберите тип системы
                 </div>
-                <div class="order__form-system-type__item">гибридная</div>
-                <div class="order__form-system-type__item">ручная</div>
+                <div class="order__form-system-type__body">
+                  <div class="order__form-system-type__item">
+                    Автоматизированная
+                  </div>
+                  <div class="order__form-system-type__item">Гибридная</div>
+                  <div class="order__form-system-type__item">Ручная</div>
+                </div>
               </div>
-              <span class="input__error">*Пустое поле</span>
-            </div>
-            <label
-              for="e-mail"
-              class="order__form__label order__form-item order__form-item_active"
-            >
-              <input
-                type="text"
-                class="input"
-                placeholder="Ваш e-mail"
-                id="e-mail"
-              />
-              <span class="input__error">*Пустое поле</span>
-            </label>
-            <label
-              for="name"
-              class="order__form__label order__form-item order__form-item_active"
-            >
-              <input
-                type="text"
-                class="input"
-                placeholder="Ваше имя"
-                id="name"
-              />
-              <span class="input__error">*Пустое поле</span>
-            </label>
-            <div
-              class="order__form-progress order__form-item order__form-item_active"
-            >
-              <div class="order__form-progress__wrapper">
-                <p class="order__form-progress__title">
-                  Используйте ползунок для указания степени выполнения вашего
-                  заказа.
-                </p>
-                <span class="order__form-progress__number" id="progress-value"
-                  >0%</span
-                >
-              </div>
-              <input
-                type="range"
-                name="form-progress"
-                id="form-progress"
-                class="form-progress"
-                min="1"
-                max="100"
-                value="1"
-              />
-              <span class="input__error">*Пустое поле</span>
-            </div>
-            <div
-              class="order__form-file-upload order__form-item order__form-item_active"
-            >
               <label
-                for="file-input"
-                class="order__form-file-upload__label"
-              ></label>
-              <input
-                id="file-input"
-                class="order__form-file-upload__input"
-                type="file"
-              />
-              <span class="input__error">*Пустое поле</span>
+                for="e-mail"
+                class="order__form__label order__form-item order__form-item_active"
+              >
+                <input
+                  type="text"
+                  class="input"
+                  placeholder="Ваш e-mail"
+                  id="e-mail"
+                />
+              </label>
+              <label
+                for="name"
+                class="order__form__label order__form-item order__form-item_active input__name_parent"
+              >
+                <input
+                  type="text"
+                  class="input input__name"
+                  placeholder="Ваше имя"
+                  id="name"
+                />
+                <!-- <span class="input__error">*Пустое поле</span> -->
+              </label>
+            </div>
+            <div class="order__form-wrapper-bottom">
+              <div
+                class="order__form-progress order__form-item order__form-item_active"
+              >
+                <div class="order__form-progress__wrapper">
+                  <p class="order__form-progress__title">
+                    Используйте ползунок для указания степени выполнения вашего
+                    заказа.
+                  </p>
+                  <span class="order__form-progress__number" id="progress-value"
+                    >0%</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  name="form-progress"
+                  id="form-progress"
+                  class="form-progress"
+                  min="1"
+                  max="100"
+                  value="1"
+                />
+                <!-- <span class="input__error">*Пустое поле</span> -->
+              </div>
+              <div
+                class="order__form-file-upload order__form-item order__form-item_active"
+              >
+                <label
+                  for="file-input"
+                  class="order__form-file-upload__label"
+                ></label>
+                <input
+                  id="file-input"
+                  class="order__form-file-upload__input"
+                  type="file"
+                />
+              </div>
             </div>
           </div>
           <div class="order__form-btn-wrapper">
